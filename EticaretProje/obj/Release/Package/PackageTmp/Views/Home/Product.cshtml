@@ -1,0 +1,10 @@
+﻿@model EticaretProje.Models.i.ProductModel
+@{
+    ViewBag.Title = "Product";
+}
+
+@Html.Partial("_Product", Model.Products)
+
+@Html.Partial("_AddCard", Model.Products)
+
+@Html.Partial("_Comments", new EticaretProje.Models.i.CommentsModel() { Comments = Model.Comments, Product = Model.Products })
